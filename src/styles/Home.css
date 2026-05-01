@@ -1,0 +1,51 @@
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5%;
+    background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 40%);
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-content p{
+    font-size: 1.25rem;
+    color: var(--text-main);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+    
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}

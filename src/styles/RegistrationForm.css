@@ -1,0 +1,118 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+}
+
+.form-card {
+    background: var(--bg-surface);
+    padding: 3rem;
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+    
+}
+
+.form-card h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: var(--glass-bg);
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.gender-options {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:disabled {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 1px solid #fecaca;
+}
+
+.loading-message {
+    text-align: center;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 1rem;
+}
