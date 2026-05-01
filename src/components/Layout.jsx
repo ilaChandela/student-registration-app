@@ -4,7 +4,7 @@ import { useTheme } from "../store/theme/themeContext";
 function Layout({ children }) {
     const { theme } = useTheme();
     return (
-        <div className={`layout ${theme}`}>
+        <div className="layout">
             <Navbar />
             <div className="content">
                 {children}
