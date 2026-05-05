@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useUser } from "../store/user/userContext";
 
 function useStudentForm(initialState){
     const [formData, setFormData] = useState(initialState);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const navigate = useNavigate();
 
     const { addUser } = useUser();
 
@@ -31,9 +29,10 @@ function useStudentForm(initialState){
             await new Promise((resolve) => setTimeout(resolve, 1500));
             addUser(formData);
             resetForm();
-            navigate("/student-details");
+            return true;
         } catch (error) {
-            setError(error);
+            setError(error.message);
+            return false;
         } finally {
             setLoading(false);
         }

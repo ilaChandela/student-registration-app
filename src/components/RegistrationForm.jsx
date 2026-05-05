@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import useStudentForm from "../hooks/useStudentForm";
 import Loader from "./Loader";
 import "../styles/RegistrationForm.css";
@@ -12,12 +13,15 @@ function RegistrationForm() {
     course: "",
   };
 
+  const navigate = useNavigate();
   const { formData, loading, error, handleChange, handleSubmit, resetForm } =
     useStudentForm(initialState);
 
-  const handleFormSubmit = (e) => {
-    handleSubmit(e);
-    resetForm();
+  const handleFormSubmit = async (e) => {
+    const success = await handleSubmit(e);
+    if (success) {
+      navigate("/student-details");
+    }
   };
 
   if (loading) {
